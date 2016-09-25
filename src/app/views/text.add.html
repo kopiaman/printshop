@@ -1,0 +1,73 @@
+<br class="hidden-xs"/>
+<br class="hidden-xs"/>
+<a ui-sref="app.product.home" class="mute-link visible-xs" ><i class="fa fa-angle-left"></i> <translate>Back to designer</translate></a>
+<br class="visible-xs"/>
+
+<div class="panel panel-default" ng-hide="fontSelectionWindow">
+  <div class="panel-body">
+	<div class="row">
+		<div class="col-md-12">
+			<p translate>Enter your text below</p>
+			<textarea class="form-control" ng-model="$parent.addText" rows="4"></textarea>
+		</div>		
+	</div>	
+	<br />
+	<div class="row">
+		<div class="col-md-6">
+			<p style="margin-bottom: 0;" translate>Font</p>
+
+<!-- Split button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default" style="background: #fff; width: 87%; height: 36px;">
+      <img ng-cloak style="width: 153px; height: 31px; margin-top: -7px;" ng-src="{{font_image(selectedFont.image)}}" />
+  </button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" ng-click="showFontSelector()">
+    <span class="caret"></span>
+    <span class="sr-only" translate>Toggle Dropdown</span>
+  </button>
+</div>
+
+  
+		</div>			
+		<div class="col-md-6">
+            <p style="margin-bottom: 0;">&nbsp;</p>
+			<a href="" class="btn btn-primary pull-right" ng-click="add_text()" translate>Add text</a>
+		</div>		
+	</div>
+	</div>
+</div>
+<p class="text-center" ng-hide="fontSelectionWindow"><em><small translate>*You can further customize the text once it's added</small></em></p>
+
+<div class="panel panel-default panel-category" ng-show="fontSelectionWindow">
+  <div class="panel-body">
+  <button type="button" class="close" ng-click="hideFontSelector()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	<div class="row">
+		<div class="col-md-12">
+			<h3 translate>Select a font category</h3>
+            <div class="row font-category-selector">
+                <div class="col-xs-4" ng-repeat="fontCategory in fontCategories">
+                    <a href="" ng-click="setFontCategory(fontCategory)" ng-class="{selected: fontCategory == selectedFontCategory}">{{fontCategory}}</a>
+                </div>
+            </div>
+            <hr />
+            
+            <perfect-scrollbar class="scroller" wheel-propagation="true" wheel-speed="50" suppress-scroll-x="true" refresh-on-change="selectedFontCategory">
+                <div style="padding-right: 40px">
+                  <div class="row font-selector">
+                      <div class="col-xs-6 font-thumbmail" ng-repeat="font in _.where(fonts, {category: selectedFontCategory})">
+                          <a href="" ng-click="setSelectedFont(font)" style="margin: 5px; border-bottom: 1px solid #d2d2d2" ng-class="{selected: font == selectedFont}">
+                              <img style="background: #000; width: 100%; margin-top: 0px;" ng-src="{{font_image(font.image)}}" />
+                          </a>
+                      </div>
+                  </div>
+                </div>
+            </perfect-scrollbar>
+            
+
+		</div>		
+	</div>	
+	<br />
+
+      
+	</div>
+	</div>

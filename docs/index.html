@@ -1,0 +1,505 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>PrintPixel - A shopping cart for custom products</title>
+	
+	<meta name="description" content="PrintPixel is a standalone shopping cart suited for selling and printing custom designed products. The application allows the user to browse your product catalog, customize a product and checkout all in one page. It uses a minimalist style, making your site look uncongested without sacrificing functionality. It's also responsive and works on mobile, tablets as well as desktops. The aim of this application is to make it easy and convenient for your users - whilst providing a fantastic user experience.">
+	<meta name="author" content="ExpressPixel">
+	<meta name="copyright" content="ExpressPixel">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2014-12-28T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	
+	
+	
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url();}
+		a{color:#0000FF;}
+		.btn {
+			border-radius:3px;
+		}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -ms-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -webkit-gradient(linear, 0 0, 0 0088CC%, from(#DDDDDD), to(#0044CC));
+			  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+			  background-image: linear-gradient(top, #0088CC, #0044CC);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088CC', endColorstr='#0044CC', GradientType=0);
+			  border-color: #0044CC #0044CC #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  border-color: #0088CC #0088CC #bfbfbf;
+		  background-color: #0044CC;
+		}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ul a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ul{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ul a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ul a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ul a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body class="documenter-project-printpixel">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ul id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+				
+						<li><a href="#prerequisites" title=" Prerequisites"> Prerequisites</a></li>
+						<li><a href="#quick_installation" title=" Quick installation"> Quick installation</a></li>
+						<li><a href="#setting_up_categories" title=" Setting up your categories"> Setting up your categories</a></li>
+						<li><a href="#setting_up_products" title=" Setting up your products"> Setting up your products</a></li>
+						<li><a href="#setting_up_pricing" title=" Setting up your pricing"> Setting up your pricing</a></li>
+						<li><a href="#setting_up_payments" title=" Setting up payments (Stripe)"> Setting up payments (Stripe)</a></li>
+						<li><a href="#managing_and_printing_orders" title=" Managing and printing orders"> Managing and printing orders</a></li>
+						<li><a href="#adding_clip_art" title=" Adding clip-art and fonts"> Adding clip-art and fonts</a></li>
+						<li><a href="#paypal" title=" Integrating PayPal"> Integrating PayPal</a></li>
+						<li><a href="#developers" title=" For developers"> For developers</a></li>
+						<li><a href="#embedding" title=" Embedding into your website"> Embedding into your website</a></li>
+						<li><a href="#sample_data" title=" Sample data"> Sample data</a></li>
+						<li><a href="#common_errors" title=" Common errors"> Common errors</a></li>
+						<li><a href="#support" title=" Support"> Support</a></li>
+			
+		</ul>
+		<div id="documenter_copyright">Copyright ExpressPixel 2014<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover">
+	<h1>PrintPixel</h1>
+	<h2>A shopping cart for custom products</h2>
+	<div id="documenter_buttons">
+		
+	</div>
+	<hr>
+	<ul>
+	<li>created: 12/28/2014</li>
+	<li>latest update: 12/28/2014</li>
+	<li>by: ExpressPixel</li>
+	<li><a href="http://expresspixel.com/">http://expresspixel.com/</a></li>
+	<li>email: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#101;&#120;&#112;&#114;&#101;&#115;&#115;&#112;&#105;&#120;&#101;&#108;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#101;&#120;&#112;&#114;&#101;&#115;&#115;&#112;&#105;&#120;&#101;&#108;&#46;&#99;&#111;&#109;</a></li>
+	</ul>
+	<p>A responsive, user friendly, all-in-one shopping cart for designing, printing and selling custom T-shirts or other products</p>
+	</section>
+
+			<section id="prerequisites">
+			<div class="page-header"><h3> Prerequisites</h3><hr class="notop"></div>
+			<h5>Server requirements</h5>
+<ol>
+	<li>Apache 1.13.19 or above</li>	
+	<li>PHP 5.4+</li>	
+	<li>ImageMagick >= 6.2.4 with imagick php module</li>
+	<li>The mod_rewrite Apache module</li>
+</ol>
+
+
+<h5>Pre-installation</h5>
+<p>You'll need to make sure you have the following:</p>
+<ul>
+	<li>Access to your web server (FTP/SSH/SFTP)</li>
+	<li>A text editor</li>
+	<li>A web browser</li>
+	<li>A stripe account</li>
+</ul>		</section>
+			<section id="quick_installation">
+			<div class="page-header"><h3> Quick installation</h3><hr class="notop"></div>
+			<p><strong>Step 1.</strong> Unzip the downloaded file to a folder on your hard drive</p>
+<p><strong>Step 2.</strong> Upload the contents of the "/upload" directory to your web server<br />
+<p><strong>Step 3.</strong> Make sure the following folders are writable (chmod 755)<br />
+	<i>/storage<br />
+	/data/database/<br />
+	</i>
+</p>
+<p><strong>Step 4.</strong> You can now access it by going to the web address of the folder you uploaded to.</p>
+
+<p><strong>Step 5.</strong> The admin can be found in the <strong>/admin</strong> directory. The default password is :</p>
+<p><strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username: admin<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password: changeme<br /></strong>
+</p>		
+<p>We recommend that you change the password.</p>
+
+<p><strong>Step 6.</strong> In the admin, click on settings. Enter your stripe <i>"secret key"</i> and <i>"publishable key"</i></p>
+<p style="margin-bottom: 0"><strong>Step 7.</strong> (optional) If you are uploading in a sub-directory, you need to open the "config.php" file and change the BASE_URL to your directory name.
+<br />e.g.
+If you want to use http://example.com/tshirt, then the config.php line needs to look like
+<pre style="margin-top: 0">define("BASE_URL", "/tshirt/");</pre>
+	
+</p>
+
+<p>You now can start using the system and adding your products.</p>		</section>
+			<section id="setting_up_categories">
+			<div class="page-header"><h3> Setting up your categories</h3><hr class="notop"></div>
+			<p>You’ll need to set-up categories for your products. Click on the “Inventory” menu then “Categories”. Enter the names for your categories and use the arrows to move it up and down. It will be displayed in the same order in the designer.</p>
+
+<ol>
+	<li>Click on the “Inventory” menu to start.</li>	
+	<li>Click on the “Categories” tab</li>	
+	<li>Click on "Add new category" at the bottom to start</li>
+	<li>You can now edit the newly added category</li>
+	<li>Don't forget to click on "Save categories" when completed</li>
+</ol>
+
+<img src="assets/images/categories.png" />		</section>
+			<section id="setting_up_products">
+			<div class="page-header"><h3> Setting up your products</h3><hr class="notop"></div>
+			<ol>
+	<li>Click on the “Inventory” menu to start.</li>	
+	<li>Click on “Add new product” and enter your product details.</li>	
+	<li>On the next page you can enter your pricing information, variants, editable orientations and more.</li>
+</ol>
+
+<h5>Setting up variants</h5>
+<ol>
+	<li>Click on the “Add new variant type” to add a new variant based on colors</li>	
+	<li>If you’ve already set-up a variant you need to click on “Add new variant” and select it from the newly added dropdown list</li>	
+	<li>If you need more orientations you’ll need to Click on “Add new orientation” on the box above</li>
+	<li>Click on select image for each orientation and upload your image. Note: your image must be <strong>500x500px</strong></li>
+</ol>
+
+<h5>Setting up areas</h5>
+<ol>
+	<li>You will have to set up an area that the user can design in for each product</li>	
+	<li>Scroll down to the “Editable area” section</li>	
+	<li>Enter the printable width and height in mm. This is the size of the area your users will be able to design in</li>
+	<li>Also, enter the offset X and offset Y in mm. These values position your editable area size on your product</li>
+	<li>Lastly you need to enter the orientation dimensions, again in mm. This equates to the width and height of the 500x500px in relation to your actual product size</li>
+	<li>You’ll need to do this for each product</li>
+</ol>
+<img src="assets/images/setting_up_products.png" />
+		</section>
+			<section id="setting_up_pricing">
+			<div class="page-header"><h3> Setting up your pricing</h3><hr class="notop"></div>
+			<ol>
+	<li>
+		<p>Click on the “Pricing” menu to start.</p>
+	</li>	
+	
+	<li>
+		<p>Set your postage costs</p>
+	</li>
+	
+	<li>
+		<p>Enter the cost per color for each side</p>
+	</li>					
+
+</ol>
+<img src="assets/images/setting_up_pricing.png" />
+
+		</section>
+			<section id="setting_up_payments">
+			<div class="page-header"><h3> Setting up payments (Stripe)</h3><hr class="notop"></div>
+			<p>Login to your admin control panel and click on “Settings” in the menu.</p>
+
+<ol>
+	<li>
+		<p>Stripe secret key<br />
+		Now unzip the downloaded file to a folder on your hard drive</p>
+	</li>	
+	
+	<li>
+		<p>Stripe publishable key<br />
+		You can upload your files to your web server using an FTP client. You’ll need to decide whether you want to install it in the root directory or in a sub-directory.</p>
+	</li>
+	
+	<li>
+		<p>Default currency<br />
+		We’ve set this to USD by default. Select the one you want to use and make sure stripe supports it.</p>
+	</li>		
+	
+	<li>
+		<p>You’re ready to start accepting payments..</p>
+	</li>				
+
+	<li>
+		<p>You can test payments using</p>
+		<style>
+			code>span {
+display: inline-block;
+width: 8px;
+</style>
+<table class="table table-bordered table-condensed">
+  <thead>
+    <tr><th>Number</th>
+    <th>Card type</th>
+  </tr></thead>
+  <tbody>
+    <tr><td class="number"><code>4242<span></span>4242<span></span>4242<span></span>4242</code></td><td>Visa</td></tr>
+    <tr><td class="number"><code>4012<span></span>8888<span></span>8888<span></span>1881</code></td><td>Visa</td></tr>
+    <tr><td class="number"><code>4000<span></span>0566<span></span>5566<span></span>5556</code></td><td>Visa (debit)</td></tr>
+    <tr><td class="number"><code>5555<span></span>5555<span></span>5555<span></span>4444</code></td><td>MasterCard</td></tr>
+    <tr><td class="number"><code>5200<span></span>8282<span></span>8282<span></span>8210</code></td><td>MasterCard (debit)</td></tr>
+    <tr><td class="number"><code>5105<span></span>1051<span></span>0510<span></span>5100</code></td><td>MasterCard (prepaid)</td></tr>
+    <tr><td class="number"><code>3782<span></span>822463<span></span>10005</code></td><td>American Express</td></tr>
+    <tr><td class="number"><code>3714<span></span>496353<span></span>98431</code></td><td>American Express</td></tr>
+    <tr><td class="number"><code>6011<span></span>1111<span></span>1111<span></span>1117</code></td><td>Discover</td></tr>
+    <tr><td class="number"><code>6011<span></span>0009<span></span>9013<span></span>9424</code></td><td>Discover</td></tr>
+    <tr><td class="number"><code>3056<span></span>9309<span></span>0259<span></span>04</code></td><td>Diners Club</td></tr>
+    <tr><td class="number"><code>3852<span></span>0000<span></span>0232<span></span>37</code></td><td>Diners Club</td></tr>
+    <tr><td class="number"><code>3530<span></span>1113<span></span>3330<span></span>0000</code></td><td>JCB</td></tr>
+    <tr><td class="number"><code>3566<span></span>0020<span></span>2036<span></span>0505</code></td><td>JCB</td></tr>
+  </tbody>
+</table>
+<em>Taken from : <a href="https://stripe.com/docs/testing">https://stripe.com/docs/testing</a>.</em>
+	</li>
+</ol>
+
+<br />
+<p>* Note – if you don’t want to use stripe, please refer to the “Developers section”.</p>
+<img class="thumbnail" src="assets/images/setting_up_payments.png" />
+		</section>
+			<section id="managing_and_printing_orders">
+			<div class="page-header"><h3> Managing and printing orders</h3><hr class="notop"></div>
+			<p>All your orders are visible in your “Dashboard”. Click on the “Orders” item in the menu to view your orders.</p>
+
+<ol>
+	<li>
+		<p>Selecting an order<br />
+		Orders are sorted by the date it was ordered. Click on “View” to view the order details.
+		</p>
+	</li>	
+				
+	<li>
+		<p>Printing images<br />
+		Click on download images to view what your customers had designed. This image can be printed.
+		</p>
+	</li>	
+				
+	<li>
+		<p>Quantities and pricing<br />
+		Make sure you check the sizes ordered and their respective quantities.
+		</p>
+	</li>	
+				
+	<li>
+		<p>
+		When you’ve printed and dispatched the order – select the “Yes” option and click on save. This will mark the item as dispatched.
+		</p>
+	</li>
+
+</ol>
+		</section>
+			<section id="adding_clip_art">
+			<div class="page-header"><h3> Adding clip-art and fonts</h3><hr class="notop"></div>
+			<h5>Adding clip-art</h5>
+<p>All clip-art is stored in the “clip_art” folder. You can create directories in this folder and upload your images there. They will appear in the clip-art section of the designer.</p>
+<img class="thumbnail" src="assets/images/adding_clip_art.png" />
+
+<h5>Adding fonts</h5>
+<p>We use the “Font Squirrel” format for fonts. All fonts are stored in the “fonts” folder. If you want to add your own fonts, you’ll need to upload the following : </p>
+
+<ol>
+	<li>
+		<p>An image in the <strong>/png</strong> folder</p>
+	</li>	
+				
+	<li>
+		<p>A json file in the <strong>/json</strong> folder. It needs the following content:</p>
+		<pre>
+{
+	"name": "1942 report",
+	"url": "1942-report",
+	"category": "Typewriter",
+	"variants": ["Regular"],
+	"regular": {
+		"stylesheet": "fonts\/web\/1942-report_Regular\/stylesheet.css",
+		"ttf": "fonts\/web\/1942-report_Regular\/1942-webfont.ttf",
+		"fontface": "1942_report1942_report"
+	},
+	"italic": false,
+	"bold": false,
+	"bolditalic": false
+}</pre>
+	</li>	
+				
+	<li>
+		<p>The webfonts must contain a directory "FontName" with woff, ttf, svg and eot files. This can be generated using Font Squirrel.</p>
+	</li>
+
+</ol>
+
+<p>These fonts will appear in the font selection area of the text adding/editing sections.</p><br />
+<img class="thumbnail" src="assets/images/fonts.png" />
+		</section>
+			<section id="paypal">
+			<div class="page-header"><h3> Integrating PayPal</h3><hr class="notop"></div>
+			<p>It is preferable to use Stripe as it provides a better experience for the user and is easier to set-up. However, some countries do not support stripe yet. For those users you can choose PayPal as an alternative.</p>
+
+<ol>
+	<li>
+		<p>Go to the "Settings" page of the PrintPixel admin<br />
+		You will see 4 fields Paypal UserName, Paypal Password, Paypal Signature and Paypal environment. You need to fill these in.
+		</p>
+	</li>	
+				
+	<li>
+		<p>Now go to PayPal and get the credentials to use.<br />
+		<p>Live: <a href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_login-api-run">https://www.paypal.com/us/cgi-bin/webscr?cmd=_login-api-run</a><br />
+		<p>Test (sandbox): <a href="https://sandbox.paypal.com/us/cgi-bin/webscr?cmd=_login-api-run">https://sandbox.paypal.com/us/cgi-bin/webscr?cmd=_login-api-run</a>
+		</p>
+	</li>	
+				
+	<li>
+		<p>Save the credentials<br />
+		Set the "Default payment method" to PayPal enter the correct credentials and hit "Save settings"
+		</p>
+	</li>	
+				
+	<li>
+		<p>Now run a test to see if everything is working fine. If not recheck your credentials and contact us.</p>
+	</li>
+
+</ol>		</section>
+			<section id="developers">
+			<div class="page-header"><h3> For developers</h3><hr class="notop"></div>
+			<p>If you’re a developer and want to integrate the designer into your own shopping cart or website here are a few things that might help you:</p>
+<em>Note: We've purposely used yml for storing product data to make it easier for integration with existing systems. It contains simpler data models (less joins) and no mysql schema to stick to.</em><br /><br />
+<ol>
+	<li>
+		<p><strong>Importing products</strong><br />
+		Products are all stored as yaml files. If you already have a database of products you can export your product and the details to a yaml file with the following structure:</p>
+		<pre>name: 'Baby Cap'
+slug: baby-cap
+description: 'Something'
+category: 'Baby Cap'
+price: '9.90'
+sizes:
+    - 'One size'
+orientations:
+    - { name: Front, width: 282.55860150973, height: 282.55860150973, printable_width: 109.9960269976, printable_height: 109.9960269976, printable_offset_x: 84.7676, printable_offset_y: 137.243 }
+    - { name: Back, width: 282.55860150973, height: 282.55860150973, printable_width: 109.9960269976, printable_height: 109.9960269976, printable_offset_x: 88.8041, printable_offset_y: 137.243 }
+variants:
+    - { name: white, price: '9.90', orientations: { Front: 817_1_1.png, Back: 817_2_1.png } }
+    - { name: black, price: '9.90', orientations: { Front: 817_1_2.png, Back: 817_2_2.png } }
+    - { name: 'grass green', price: '9.90', orientations: { Front: 817_1_88.png, Back: 817_2_88.png } }
+    - { name: 'sky blue', price: '9.90', orientations: { Front: 817_1_63.png, Back: 817_2_63.png } }
+    - { name: navy, price: '9.90', orientations: { Front: 817_1_399.png, Back: 817_2_399.png } }
+    - { name: red, price: '9.90', orientations: { Front: 817_1_196.png, Back: 817_2_196.png } }
+    - { name: pink, price: '9.90', orientations: { Front: 817_1_236.png, Back: 817_2_236.png } }
+defaultVariant: white
+</pre><br />
+	</li>	
+				
+	<li>
+		<p><strong>Linking to a product</strong><br />
+		If you need to link to a specific product you can use the product slug as follows. <pre>http://example.com/#product/@product-slug@</pre><br />The designer will then load the desired product.
+		</p>
+	</li>	
+
+	<li>
+		<p><strong>Customizing the theme</strong><br />
+		The theme is coded in Bootstrap and LESS. To change colors/fonts you will need to edit <strong>variables.less</strong>.<br />
+		If you want to change the layout and structure you must edit the HTML files in the <strong>/views/</strong> folder.<br />
+		It’s built with gulp.
+		</p>
+	</li>	
+		
+	<li>
+		<p><strong>Adding different payment options</strong><br />
+		The <strong>BuyCheckoutController.js</strong> contains a method called <strong>submitForm</strong>. You can modify this method to submit your form to your own shopping cart or change to another payment method.
+		</p>
+	</li>			
+	
+	<li>
+		<p><strong>Integrating it into your website</strong><br />
+		The simplest way is to use an iframe with the link to the designer. Alternatively, you can copy the links to the css, json from the index.html in the dist directory with the body.
+		</p>
+	</li>		
+	
+	<li>
+		<p><strong>Integrating your own shopping cart</strong><br />
+		Once you’ve imported your own products to the yaml file and changed the submitForm function, you’ll almost be there.<br /><br />
+There API calls to:<br />
+<strong>session.php</strong> that maintain a session. You may need to modify this to keep track of your user if they’re logged in.<br />
+<strong>upload.php</strong> it may be nice to associate uploads with user ids.<br />
+<strong>checkout.php</strong> stores the payment data<br />
+
+		</p>
+	</li>	
+				
+	<li>
+		<p><strong>Source files</strong><br />
+		The source files for the AngularJS app are located in the "src" directory. Please make sure bower, node and npmare installed. Then use gulp to compile.
+		</p>
+	</li>	
+				
+
+</ol>
+		</section>
+			<section id="embedding">
+			<div class="page-header"><h3> Embedding into your website</h3><hr class="notop"></div>
+			<p>The easiest way to embed the application in your website is to use the following code : </p>
+<pre>
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #007700">&lt;div</span> <span style="color: #0000CC">class=</span><span style="background-color: #fff0f0">&quot;tshirt-container&quot;</span><span style="color: #007700">&gt;</span>
+    <span style="color: #007700">&lt;iframe</span> <span style="color: #0000CC">src=</span><span style="background-color: #fff0f0">&quot;http://example.com&quot;</span> <span style="color: #0000CC">height=</span><span style="background-color: #fff0f0">&quot;690&quot;</span> <span style="color: #0000CC">width=</span><span style="background-color: #fff0f0">&quot;1020&quot;</span> <span style="color: #0000CC">allowfullscreen=</span><span style="background-color: #fff0f0">&quot;&quot;</span> <span style="color: #0000CC">frameborder=</span><span style="background-color: #fff0f0">&quot;0&quot;</span><span style="color: #007700">&gt;</span>
+    <span style="color: #007700">&lt;/iframe&gt;</span>
+<span style="color: #007700">&lt;/div&gt;</span>
+ 
+<span style="color: #007700">&lt;style&gt;</span>
+<span style="color: #BB0066; font-weight: bold">.tshirt-container</span> {
+    <span style="color: #008800; font-weight: bold">position</span><span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">relative</span>;
+    <span style="color: #008800; font-weight: bold">padding-bottom</span><span style="color: #333333">:</span> <span style="color: #6600EE; font-weight: bold">56</span><span style="color: #333333">.</span><span style="color: #6600EE; font-weight: bold">25</span><span style="color: #333333">%</span>;
+    <span style="color: #008800; font-weight: bold">padding-top</span><span style="color: #333333">:</span> <span style="color: #6600EE; font-weight: bold">35px</span>;
+    <span style="color: #008800; font-weight: bold">height</span><span style="color: #333333">:</span> <span style="color: #6600EE; font-weight: bold">0</span>;
+    <span style="color: #008800; font-weight: bold">overflow</span><span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">hidden</span>;
+}
+<span style="color: #BB0066; font-weight: bold">.tshirt-container</span> <span style="color: #007700">iframe</span> {
+    <span style="color: #008800; font-weight: bold">position</span><span style="color: #333333">:</span> <span style="color: #008800; font-weight: bold">absolute</span>;
+    <span style="color: #008800; font-weight: bold">top</span><span style="color: #333333">:</span><span style="color: #6600EE; font-weight: bold">0</span>;
+    <span style="color: #008800; font-weight: bold">left</span><span style="color: #333333">:</span> <span style="color: #6600EE; font-weight: bold">0</span>;
+    <span style="color: #008800; font-weight: bold">width</span><span style="color: #333333">:</span> <span style="color: #6600EE; font-weight: bold">100</span><span style="color: #333333">%</span>;
+    <span style="color: #008800; font-weight: bold">height</span><span style="color: #333333">:</span> <span style="color: #6600EE; font-weight: bold">100</span><span style="color: #333333">%</span>;
+}
+<span style="color: #007700">&lt;/style&gt;</span>
+</pre></div>
+
+</pre>
+
+<p>Remember to replace <strong>http://example.com</strong> with your own URL.</p>
+		</section>
+			<section id="sample_data">
+			<div class="page-header"><h3> Sample data</h3><hr class="notop"></div>
+			<p>If you'd like the sample data used in the live demo, you can download it from here - <a href="http://docs.expresspixel.com/printpixel/extras/sample-data.zip">http://docs.expresspixel.com/data/print-pixel/extras/sample-data.zip</a></p>		</section>
+			<section id="common_errors">
+			<div class="page-header"><h3> Common errors</h3><hr class="notop"></div>
+			<h5>ERROR - PHP fileinfo extension missing</h5>
+<p>This extension is enabled by default as of PHP 5.3.0. However, some hosts may still have it disabled.</p>
+<p>Windows users must include the bundled php_fileinfo.dll DLL file in php.ini to enable this extension.</p>
+		</section>
+			<section id="support">
+			<div class="page-header"><h3> Support</h3><hr class="notop"></div>
+			<p>For any enquiries, help, suggestions or feedback you can contact us on <a href="support@expresspixel.com.">support@expresspixel.com</a>.
+If you’d like custom development or theming we have a pricing section that you can refer to before contacting us.</p>		</section>
+		
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Dear {name}
+
+
+{instructions}
+
+Order number: {transaction_id}
+
+Best Regards,
+{site_name}

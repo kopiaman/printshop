@@ -1,0 +1,8 @@
+Dear {name}
+
+This is an email to confirm that your order is ready for pick up.
+
+Order number: {transaction_id}
+
+Best Regards,
+{site_name}

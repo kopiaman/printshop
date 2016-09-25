@@ -1,0 +1,42 @@
+PrintPixel 1.0.7, 25/04/2015
+--------------------------------------------
+- Removed the need for mod_rewrite
+- Ability to print in low-res without ImageMagic
+- Added ability to download user uploaded images
+
+PrintPixel 1.0.6, 05/02/2015
+--------------------------------------------
+- Added ability to add bulk discounts
+- Added ability to add additional prices per side
+- Added ability to additional prices per variant (via yaml)
+- Added "Ready for pick-up" fulfilment status
+
+PrintPixel 1.0.5, 17/01/2015
+--------------------------------------------
+- Added multiple payment options in checkout
+- Added new payment option : Bank transfer
+- Added ability to download design by svg, png, tiff or pdf
+- Added translation ability (via a .po file)
+
+PrintPixel 1.0.4, 08/01/2015
+--------------------------------------------
+- Added new payment option : PayPal Express Checkout
+- Added ability to delete an order
+
+PrintPixel 1.0.3, 04/01/2015
+--------------------------------------------
+- Added messages to alert user of missing extensions SQLite3, pdo_sqlite, pdo_mysql, finfo_open
+- Prefixed the root directory to all includes so XAMPP users don't have include problems
+
+PrintPixel 1.0.2, 02/01/2015
+--------------------------------------------
+- Centers text by default on mobile
+- Fixed iphone 6 bug for selecting different sides
+- Fixed bug for editing product orientations
+
+PrintPixel 1.0.1, 30/12/2014
+--------------------------------------------
+- Added compatibility for transparent PNGs
+- Added settings for sending emails to the bootstrap.php file 
+- Added tooltip for "Proceed to checkout"
+- Fixed order dispatched status date

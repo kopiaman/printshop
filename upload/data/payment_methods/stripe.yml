@@ -1,0 +1,6 @@
+secret_key: sk_
+publishable_key: pk_
+hidden_keys: secret_key
+name: Stripe
+position: 1
+status: 1

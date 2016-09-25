@@ -1,0 +1,34 @@
+<div class="modal-header">
+	<h3 class="modal-title">Printing panel</h3>
+</div>
+
+<div class="modal-body">
+	<div class="row">
+		
+		<div class="col-sm-8 text-center">
+			<canvas id="printableArea" width="460" height="460" style="display: block;width: 460px; height: 460px;border: 1px solid #000; margin: 0 auto;"></canvas>
+		</div>
+		
+		<div class="col-sm-4">
+			<p>Please wait until the image has fully loaded before printing.</p>
+			
+			<button class="btn btn-primary btn-block" ng-click="printPNG()">Print as PNG</button>
+			<button class="btn btn-primary btn-block" ng-click="printPDF()" ng-hide="printingPDF">Print as PDF</button>
+			<button class="btn btn-primary btn-block" ng-show="printingPDF">Printing... (slow)</button>
+			<button class="btn btn-primary btn-block" ng-click="printSVG()">Print as SVG</button><br />
+			<p><small><i>Notes:<br />
+			- it may take a while to print depending on the size of images used<br />
+			- make sure the fonts are installed or included in the same directory as the SVG
+			</i></small></p><br />
+
+			<button class="btn btn-success btn-block" ng-click="downloadUserElements()">Download user uploads</button><br />
+			
+			
+		</div>
+		
+	</div>
+</div>
+
+<div class="modal-footer">
+	<button class="btn btn-warning" ng-click="cancel()">Close</button>
+</div>

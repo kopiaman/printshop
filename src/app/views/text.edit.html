@@ -1,0 +1,227 @@
+<br class="hidden-xs"/>
+<br class="hidden-xs"/>
+<div class="panel panel-default " ng-class="{'mobile-footer  navbar-fixed-bottom':isMobile}" id="text.edit" ng-hide="fontSelectionWindow">
+  <div class="panel-body">
+
+   <div class="row" ng-show="screenWidth >= 460">
+    <div class="col-md-12">
+      <p class="hidden-xs" translate>Edit your text : </p>
+      <textarea class="form-control" ng-model="editable.text" rows="3" ng-change="changeText()"></textarea>
+    </div>  		
+    </div>	
+
+   <div class="row" style="margin-bottom: 5px;" ng-show="screenWidth < 460">
+
+    <div class="col-xs-10">
+      <p class="hidden-xs" translate>Edit your text : </p>
+      <textarea class="form-control" ng-model="editable.text" rows="2" ng-change="changeText()"></textarea>
+    </div>      
+    <div class="col-xs-2">
+      <div class="row">
+        <div class="col-xs-12" style="height: 28px">
+          <a href="" class="btn btn-default btn-sm btn-mini btn-block" ng-class="{active: editable.bold}" ng-click="toggleBold()"><i class="fa fa-bold" style="font-weight: bold;"></i></a><br />
+        </div>
+
+          <div class="col-xs-12">
+            <a href="" class="btn btn-default btn-sm btn-mini btn-block" ng-class="{active: editable.italic}" ng-click="toggleItalic()"><i class="fa fa-italic"></i></a>
+          </div>
+        </div>
+        </div>
+
+
+    </div>	
+    <br ng-show="screenWidth >= 460"/>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6">
+        <p style="margin-bottom: 0;" class="hidden-xs" translate>Font : </p>
+        <div class="row">
+          <div class="col-xs-12">
+            <!-- Split button -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-default" style="background: #fff; width: 80%; height: 36px;">
+                <img ng-cloak style="background: #000; width: 100%; margin-top: -7px;" ng-src="{{font_image(selectedFont.image)}}" />
+              </button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" ng-click="showFontSelector()">
+                <span class="caret"></span>
+                <span class="sr-only" translate>Toggle Dropdown</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 5px; display: none;">
+          <div class="col-xs-12">
+            <a href="" class="btn btn-default btn-sm" ng-class="{active: editable.textAlign == 'left'}" ng-click="align('left')"><i class="fa fa-align-left"></i></a>
+
+            <a href="" class="btn btn-default btn-sm" ng-class="{active: editable.textAlign == 'center'}" ng-click="align('center')"><i class="fa fa-align-center"></i></a>
+
+            <a href="" class="btn btn-default btn-sm" ng-class="{active: editable.textAlign == 'right'}" ng-click="align('right')"><i class="fa fa-align-right"></i></a>
+          </div>
+        </div>
+
+      </div>  		
+      <div class="hidden-xs col-sm-4">
+       <p style="margin-bottom: 0;" class="hidden-xs" translate>Font size : </p>  
+       <input ui-spinner="{orientation: 'vertical', range: 'max'}" ng-model="editable.fontSize" ng-change="changeFontSize()" class="ng-spinner" style="width: 100%;height: 28px;">            
+     </div>			
+     <div class="col-xs-6 col-sm-2">
+      <p style="margin-bottom: 0;" class="hidden-xs" translate>Color : </p>
+      <spectrum-colorpicker ng-model="editable.fill" class="hidden-xs" options="{showPaletteOnly: true, togglePaletteOnly: false, color: '#000', palette: palette, hideAfterPaletteSelect:true}"  ng-change="changeFill(editable.fill)" format="'hex'"></spectrum-colorpicker>
+
+      <div class=" visible-xs pull-right">
+        <div class="row">
+          <div class="col-xs-12">
+
+            <input ui-spinner="{orientation: 'vertical', range: 'max'}" ng-model="editable.fontSize" ng-change="changeFontSize()" class="ng-spinner" style="width: 40px;height: 28px;">            
+
+            <spectrum-colorpicker ng-model="editable.fill" options="{showPaletteOnly: true, togglePaletteOnly: false, color: '#000', palette: palette, hideAfterPaletteSelect:true}"  ng-change="changeFill(editable.fill)" format="'hex'"></spectrum-colorpicker>
+
+            <a href="" ng-show="screenWidth >= 460" class="btn btn-default" ng-class="{active: editable.bold}" ng-click="toggleBold()"><i class="fa fa-bold" style="font-weight: bold;"></i></a>
+
+            <a href="" ng-show="screenWidth >= 460" class="btn btn-default" ng-class="{active: editable.italic}" ng-click="toggleItalic()"><i class="fa fa-italic"></i></a>
+
+          </div>        
+        </div>  
+
+
+      </div>        
+    </div>        
+  </div>
+  <br class="hidden-xs"/>    
+  <br class="hidden-xs"/>		
+
+  <div class="row hidden-xs">
+    <div class="col-md-7">
+      <p translate>Alignment/Style : </p>
+
+    </div>
+    <div class="col-md-5">
+      <p translate>Center : </p>
+
+    </div>
+  </div>
+
+  <div class="row hidden-xs">
+    <div class="col-md-7">
+      <div style="border-right: 1px solid #e2e2e2; padding-right: 20px;">
+        <div class="row">
+          <div class="col-md-12">
+
+
+            <a href="" class="btn btn-default" ng-class="{active: editable.textAlign == 'left'}" ng-click="align('left')"><i class="fa fa-align-left"></i></a>
+
+            <a href="" class="btn btn-default" ng-class="{active: editable.textAlign == 'center'}" ng-click="align('center')"><i class="fa fa-align-center"></i></a>
+
+            <a href="" class="btn btn-default" ng-class="{active: editable.textAlign == 'right'}" ng-click="align('right')"><i class="fa fa-align-right"></i></a>
+
+            <div class="pull-right">
+              <a href="" class="btn btn-default" ng-class="{active: editable.bold}" ng-click="toggleBold()"><i class="fa fa-bold" style="font-weight: bold;"></i></a>
+              <a href="" class="btn btn-default" ng-class="{active: editable.italic}" ng-click="toggleItalic()"><i class="fa fa-italic"></i></a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row hidden-xs" style="margin-top: 15px; ">
+
+          <div class="col-xs-6">
+            <a href="" class="btn btn-default btn-block btn-control" ng-click="flipHorizontal()"><img style="width: 16px" src="css/images/icons/flip_horizontal-32.png" /> <translate>Flip</translate></a>
+          </div>   
+          <div class="col-xs-6">
+            <a href="" class="btn btn-default btn-block btn-control" ng-click="flipVertical()"><img style="width: 16px" src="css/images/icons/flip_vertical-26.png" /> <translate>Flop</translate></a>
+          </div>     
+        </div>
+
+        <div class="row hidden-xs" style="margin-top: 15px; display: none;">
+          <div class="col-md-12">
+            <p style="margin-bottom: 0px;" translate>Arc : </p>
+            <div ui-slider="{range: 'min'}" min="0" max="72" ng-model="fontSize"></div>
+            <div class="row">
+
+              <div class="col-md-4 text-left">
+                <img style="width: 16px" src="css/images/icons/arc-up.png" />
+              </div>                
+
+              <div class="col-md-4 text-center">
+                <i class="fa fa-arrows-h"></i>
+              </div>                
+
+              <div class="col-md-4 text-right">
+                <img style="width: 16px" src="css/images/icons/arc-down.png" />
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 hidden-xs ">
+	<a href="" class="btn btn-default btn-block btn-control" ng-click="setHorizontalCenter()"><img style="width: 20px" src="css/images/icons/resize_horizontal-26.png" /> <translate>Center horizontally</translate></a>
+
+  <a href="" class="btn btn-default btn-block btn-control" ng-click="setVerticalCenter()"  style="margin-top: 15px;"><img style="width: 20px" src="css/images/icons/resize_vertical-26.png" /> <translate>Center vertically</translate></a>
+
+
+    </div>          
+  </div>
+
+
+  <hr class="hidden-xs"/>
+  <div class="row hidden-xs">
+    <div class="col-md-12">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="outline" ng-change="changeStroke()"> <span style="margin-top: 5px" translate>Add outline?</span>
+        </label>
+      </div>
+    </div>			
+  </div>
+  <div class="row hidden-xs" ng-show="outline">
+    <div class="col-md-2">
+      <spectrum-colorpicker ng-model="editable.stroke" options="{showPaletteOnly: true, togglePaletteOnly: false, color: '#000', palette: palette, hideAfterPaletteSelect:true}" ng-change="changeStroke()" format="'hex'"></spectrum-colorpicker>
+
+    </div>				
+    <div class="col-md-10">
+      <p style="margin-bottom: 0px;" translate>Thickness {{editable.strokeWidth}} : </p>
+      <div ui-slider="{range: false, stop: changeStroke}" ui-slider min="0" max="100" ng-model="editable.strokeWidth" style="margin-top: 0px"></div>
+    </div>		
+  </div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="panel panel-default panel-category" ng-show="fontSelectionWindow">
+  <div class="panel-body">
+    <button type="button" class="close" ng-click="hideFontSelector()"><span aria-hidden="true">&times;</span><span class="sr-only" translate>Close</span></button>
+    <div class="row">
+      <div class="col-md-12">
+       <h3 translate>Select a font category</h3>
+       <div class="row font-category-selector">
+        <div class="col-xs-4" ng-repeat="fontCategory in fontCategories">
+          <a href="" ng-click="setFontCategory(fontCategory)" ng-class="{selected: fontCategory == selectedFontCategory}">{{fontCategory}}</a>
+        </div>
+      </div>
+      <hr />
+      <div class="row font-selector" ng-scrollbar rebuild-on="rebuild:me">
+        <div class="col-xs-6" ng-repeat="font in _.where(fonts, {category: selectedFontCategory})">
+          <a href="" ng-click="setSelectedFont(font)" style="margin: 5px; border-bottom: 1px solid #d2d2d2" ng-class="{selected: font == selectedFont}">
+            <img style="background: #000; width: 100%; margin-top: 0px;" ng-src="{{font_image(font.image)}}" />
+          </a>
+        </div>
+      </div>
+    </div>		
+  </div>	
+  <br />
+
+
+</div>
+</div>

@@ -1,0 +1,6 @@
+title: 'Our bank account details'
+instructions: "Please send us a payment to the following details:\n\nSort code: 12-34-56\nAccount number : 200415 38290008\nName : My Company"
+hidden_keys: null
+name: 'Bank transfer'
+position: 3
+status: 1

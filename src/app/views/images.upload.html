@@ -1,0 +1,113 @@
+<div class="panel panel-default">
+  <div class="panel-body text-center">
+    <br />
+    <br />
+    
+    
+    <div class="drag-box" ng-file-drop="onFileSelect($files)" ng-file-drag-over-class="drag-over" ng-show="dropSupported" ng-hide="file">
+
+      <input type="hidden" ng-model="myModelObj">
+
+      <div ng-file-drop-available="dropSupported=true" ng-show="!dropSupported" translate>HTML5 Drop File is not supported!</div>          
+      
+      <div class="alert alert-danger" role="alert" ng-show="error">ERROR: {{error}}</div>
+      <div style="display: block; height: 72px;" ng-hide="error"></div>
+
+
+
+      <p class="text-center" translate>Drag and drop your image in this box</p>
+      <p class="text-center" translate>or</p>
+
+      <button class="btn btn-default text-center" ng-file-select="onFileSelect($files)" data-multiple="false" translate>Click here to upload</button>
+
+
+    </div>
+    
+    
+
+    <div ng-if="file">
+
+      <div class="file-upload-preview thumbnail">
+        <img ng-show="src" ng-src="{{src}}">
+      </div>
+      <br />
+
+      <form class="form-horizontal text-left" role="form">
+        
+        <div class="form-group" style="margin-bottom: 0">
+          <label class="col-sm-4 control-label" translate>File name</label>
+          <div class="col-sm-8">
+            <p class="form-control-static" title="{{file.name}}">{{file.name.shorten(25)}}</p>
+          </div>
+        </div>
+        
+        <div class="form-group" style="margin-bottom: 0">
+          <label class="col-sm-4 control-label" translate>Size</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ humanFileSize(file.size) }}</p>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0">
+          <label class="col-sm-4 control-label" translate>Type</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{file.type}}</p>
+          </div>
+        </div>
+
+      </form>
+
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="whitespace" ng-change="setWhiteSpace(whitespace)" ng-true-value="1" ng-false-value="0" translate> Make whitespace transparent 
+          </label>
+        </div>
+      </div>
+
+
+      <br /> 
+      <br /> 
+      <br /> 
+
+      <button ng-show="progress==0" class="btn btn-default" ng-click="startUpload()" translate>Start upload</button>
+      <button ng-show="progress>0" class="btn btn-default" translate>Please wait...</button>
+
+
+      <br />
+
+
+      <div class="col-sm-offset-2 col-sm-8" ng-show="progress>0" >
+      <br />
+      <br />
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%">
+            {{progress}}%
+            <span class="sr-only">{{progress}}% Complete</span>
+          </div>
+        </div>
+        
+      </div>
+      <br /> 
+    </div>
+    
+    <br />
+    <br />
+    <br />
+    
+    <div ng-hide="file">
+      <p><small><em translate>Maximum filesize : 25MB</em></small>
+        <small><em translate>Allowed file types: gif, jpg, jpeg, png, bmp, tiff, tif</em></small></p>
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+  </div>

@@ -1,0 +1,58 @@
+<br class="hidden-xs"/>
+<a ui-sref="app.product.home" class="mute-link visible-xs" ><i class="fa fa-angle-left"></i> <translate>Back to designer</translate></a>
+<br />
+
+<div class="panel panel-default">
+    <div class="panel-body">
+
+        <div class="row">
+            <br />
+            <div class="col-xs-4 text-center">
+                <a class="text-center">
+                    <img ng-src="{{ imageUrl( {product:currentItem.product.slug, w:200, h:200, variant:currentItem.variant.slug} ) }}" style="width: 100%"/>
+                </a>
+            </div>
+
+            <div class="col-xs-8">
+
+                <ol class="breadcrumb">
+                    <li><a>{{currentItem.product.category}}</a></li>
+                    <li class="active">{{currentItem.product.name}}</li>
+                </ol>
+                <h4>{{currentItem.product.name}}</h4>
+                <h6 class="capitalize">{{currentItem.variant.name}}</h6>
+                <p>Screen print: {{ screenPrint() }}</p>
+                
+                <span><strong>{{money.format(currentItem.single_price)}}</strong><span class="normal"> per item</span></span>
+                
+            </div>
+        </div>
+
+        <br />
+        
+        <div class="row text-center">
+            <div class="col-xs-{{sizeRows}}" ng-repeat="size in currentItem.product.sizes">
+                <h5>{{size}}</h5>
+                <input ui-spinner="{min: 0, mouseWheel:false}" ng-model="currentItem.quantities[size]" ng-change="reCalculatePrice()" class="ng-spinner text-center" />            
+            </div>
+        </div>
+
+
+        <hr />
+        <div class="row">
+            <div class="col-xs-5 pull-right text-center">
+                <strong translate>Total price: </strong> <strong style="margin-left: 15px;font-size: 24px; margin-bottom: 10px;">{{money.format(currentItem.total_price)}}</strong>
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+
+            <div class="col-xs-5 pull-right">
+                <a ng-click="openCart()" class="btn btn-primary btn-block pull-right" translate>Save to cart</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

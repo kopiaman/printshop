@@ -1,0 +1,28 @@
+<div class="modal-header">
+
+  <button type="button" class="close" data-dismiss="modal" ng-click="dismiss()"><span aria-hidden="true">&times;</span><span class="sr-only"translate>Close</span></button>
+  <h4 class="modal-title" translate>{{title}}</h4>
+
+</div>
+
+<div class="modal-body">
+
+    <div class="row">
+        <div class="col-xs-10s " style="margin-left: 20px;">
+            <div class="row">
+                <div class="col-xs-11 text-center">
+                    <p translate>If you have not been redirected please click on the link below</p>
+
+                    <br class="hidden-xs"/>
+                    <br class="hidden-xs"/>
+
+                    <button class="btn btn-default btn-primary hidden-xs" ng-click="launchPayment()"><i class="icon-chevron-left"></i> <translate>Proceed to {{title}}</translate></button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>        

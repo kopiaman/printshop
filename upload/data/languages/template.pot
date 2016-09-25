@@ -1,0 +1,497 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: views\text.add.html:39
+msgid "*You can further customize the text once it's added"
+msgstr ""
+
+#: views\home.html:17
+msgid "Add Images"
+msgstr ""
+
+#: views\home.html:28
+msgid "Add Text"
+msgstr ""
+
+#: views\images.home.html:6
+msgid "Add an image to your design"
+msgstr ""
+
+#: index.html:155
+#: index.html:180
+msgid "Add image"
+msgstr ""
+
+#: views\text.edit.html:173
+msgid "Add outline?"
+msgstr ""
+
+#: index.html:156
+#: index.html:181
+#: views\text.add.html:34
+msgid "Add text"
+msgstr ""
+
+#: views\buy.checkout.html:63
+msgid "Address"
+msgstr ""
+
+#: views\buy.checkout.html:71
+msgid "Address line 2"
+msgstr ""
+
+#: views\text.edit.html:94
+msgid "Alignment/Style :"
+msgstr ""
+
+#: views\images.upload.html:100
+msgid "Allowed file types: gif, jpg, jpeg, png, bmp, tiff, tif"
+msgstr ""
+
+#: views\text.edit.html:136
+msgid "Arc :"
+msgstr ""
+
+#: views\buy.home.html:2
+#: views\image.html:2
+#: views\text.add.html:3
+msgid "Back to designer"
+msgstr ""
+
+#: index.html:199
+msgid "Bring forward"
+msgstr ""
+
+#: index.html:195
+msgid "Bring to front"
+msgstr ""
+
+#: views\images.home.html:7
+msgid "Browse our clipart or upload your own"
+msgstr ""
+
+#: index.html:157
+#: index.html:182
+msgid "Buy now"
+msgstr ""
+
+#: views\buy.checkout.html:194
+#: views\product.browser.html:131
+msgid "Cancel"
+msgstr ""
+
+#: index.html:179
+msgid "Catalog"
+msgstr ""
+
+#: views\images.edit.html:76
+#: views\text.edit.html:98
+msgid "Center :"
+msgstr ""
+
+#: views\images.edit.html:77
+#: views\text.edit.html:159
+msgid "Center horizontally"
+msgstr ""
+
+#: views\images.edit.html:79
+#: views\text.edit.html:161
+msgid "Center vertically"
+msgstr ""
+
+#: views\product.browser.html:94
+#: views\product.home.html:31
+msgid "Change color:"
+msgstr ""
+
+#: views\buy.checkout.html:8
+msgid "Checkout"
+msgstr ""
+
+#: views\buy.payment-method.html:4
+msgid "Choose a payment method..."
+msgstr ""
+
+#: views\images.home.html:20
+msgid "Choose from our library of graphics"
+msgstr ""
+
+#: views\home.html:18
+msgid "Choose from ours or upload your own"
+msgstr ""
+
+#: views\home.html:29
+msgid "Choose from over 50 different fonts"
+msgstr ""
+
+#: views\buy.checkout.html:80
+msgid "City/Town"
+msgstr ""
+
+#: views\images.my-images.html:24
+msgid "Click here"
+msgstr ""
+
+#: views\images.upload.html:21
+msgid "Click here to upload"
+msgstr ""
+
+#: views\image.html:10
+#: views\images.home.html:19
+msgid "Clip Art"
+msgstr ""
+
+#: views\buy.confirmation.html:3
+#: views\buy.custom.html:3
+#: views\buy.payment-method.html:3
+#: views\cart.html:106
+#: views\cart.html:5
+#: views\text.edit.html:204
+msgid "Close"
+msgstr ""
+
+#: views\text.edit.html:67
+msgid "Color :"
+msgstr ""
+
+#: views\images.edit.html:12
+#: views\images.edit.html:31
+msgid "Colors"
+msgstr ""
+
+#: views\buy.checkout.html:22
+msgid "Contact details"
+msgstr ""
+
+#: views\buy.checkout.html:100
+msgid "Country"
+msgstr ""
+
+#: views\buy.checkout.html:158
+msgid "Delivery Options"
+msgstr ""
+
+#: views\buy.checkout.html:57
+msgid "Delivery address"
+msgstr ""
+
+#: views\cart.html:24
+msgid "Description"
+msgstr ""
+
+#: views\buy.confirmation.html:43
+msgid "Description :"
+msgstr ""
+
+#: views\product.browser.html:113
+#: views\product.home.html:49
+msgid "Description:"
+msgstr ""
+
+#: views\home.html:5
+msgid "Design your own T-shirt"
+msgstr ""
+
+#: views\images.upload.html:18
+msgid "Drag and drop your image in this box"
+msgstr ""
+
+#: views\cart.html:52
+msgid "Duplicate design"
+msgstr ""
+
+#: views\cart.html:33
+msgid "Edit"
+msgstr ""
+
+#: views\image.html:13
+msgid "Edit image"
+msgstr ""
+
+#: views\text.edit.html:16
+#: views\text.edit.html:8
+msgid "Edit your text :"
+msgstr ""
+
+#: views\buy.checkout.html:48
+msgid "Email"
+msgstr ""
+
+#: views\text.add.html:10
+msgid "Enter your text below"
+msgstr ""
+
+#: views\images.upload.html:38
+msgid "File name"
+msgstr ""
+
+#: views\buy.checkout.html:28
+msgid "First Name"
+msgstr ""
+
+#: views\text.edit.html:127
+msgid "Flip"
+msgstr ""
+
+#: views\images.edit.html:59
+msgid "Flip horizontal"
+msgstr ""
+
+#: views\images.edit.html:62
+msgid "Flip vertical"
+msgstr ""
+
+#: views\images.edit.html:56
+msgid "Flip/Flop :"
+msgstr ""
+
+#: views\text.edit.html:130
+msgid "Flop"
+msgstr ""
+
+#: views\text.add.html:17
+msgid "Font"
+msgstr ""
+
+#: views\text.edit.html:36
+msgid "Font :"
+msgstr ""
+
+#: views\text.edit.html:63
+msgid "Font size :"
+msgstr ""
+
+#: views\images.upload.html:11
+msgid "HTML5 Drop File is not supported!"
+msgstr ""
+
+#: views\buy.custom.html:14
+msgid "If you have not been redirected please click on the link below"
+msgstr ""
+
+#: views\buy.confirmation.html:23
+msgid "Instructions"
+msgstr ""
+
+#: views\buy.checkout.html:37
+msgid "Last Name"
+msgstr ""
+
+#: index.html:59
+msgid "Loading..."
+msgstr ""
+
+#: views\images.upload.html:99
+msgid "Maximum filesize : 25MB"
+msgstr ""
+
+#: views\cart.html:6
+msgid "My cart"
+msgstr ""
+
+#: index.html:71
+msgid "My cart <span class=\"caret\"></span>"
+msgstr ""
+
+#: views\image.html:12
+#: views\images.home.html:27
+msgid "My images"
+msgstr ""
+
+#: views\buy.checkout.html:126
+msgid "Order summary"
+msgstr ""
+
+#: views\buy.confirmation.html:5
+msgid "Payment instructions"
+msgstr ""
+
+#: views\images.edit.html:40
+msgid "Photo/Full color"
+msgstr ""
+
+#: views\buy.checkout.html:193
+#: views\images.upload.html:74
+msgid "Please wait..."
+msgstr ""
+
+#: views\buy.confirmation.html:53
+msgid "Postage :"
+msgstr ""
+
+#: views\cart.html:26
+msgid "Price"
+msgstr ""
+
+#: views\cart.html:103
+#: views\cart.html:105
+msgid "Proceed to checkout"
+msgstr ""
+
+#: views\buy.checkout.html:192
+msgid "Proceed to payment"
+msgstr ""
+
+#: views\buy.custom.html:19
+msgid "Proceed to {{title}}"
+msgstr ""
+
+#: views\buy.checkout.html:86
+msgid "Province/Region/State"
+msgstr ""
+
+#: views\cart.html:25
+msgid "Quantities"
+msgstr ""
+
+#: views\images.edit.html:70
+msgid "Rotation (degrees &deg;) :"
+msgstr ""
+
+#: views\buy.home.html:52
+msgid "Save to cart"
+msgstr ""
+
+#: views\cart.html:18
+msgid "Saved to cart!"
+msgstr ""
+
+#: views\product.browser.html:6
+msgid "Select a category"
+msgstr ""
+
+#: views\home.html:40
+msgid "Select a different product"
+msgstr ""
+
+#: views\text.add.html:46
+#: views\text.edit.html:207
+msgid "Select a font category"
+msgstr ""
+
+#: views\images.clip-art.html:7
+msgid "Select a graphic"
+msgstr ""
+
+#: views\images.my-images.html:6
+msgid "Select an image"
+msgstr ""
+
+#: views\images.home.html:28
+msgid "Select one your uploaded images"
+msgstr ""
+
+#: views\product.browser.html:130
+msgid "Select product"
+msgstr ""
+
+#: index.html:201
+msgid "Send backward"
+msgstr ""
+
+#: index.html:197
+msgid "Send to back"
+msgstr ""
+
+#: views\images.upload.html:45
+msgid "Size"
+msgstr ""
+
+#: views\images.upload.html:73
+msgid "Start upload"
+msgstr ""
+
+#: views\buy.checkout.html:139
+msgid "Subtotal"
+msgstr ""
+
+#: views\home.html:41
+msgid "Swap colors or browse our catalog"
+msgstr ""
+
+#: index.html:154
+msgid "Switch product"
+msgstr ""
+
+#: views\text.edit.html:184
+msgid "Thickness {{editable.strokeWidth}} :"
+msgstr ""
+
+#: views\home.html:6
+msgid "To get started, choose an option below"
+msgstr ""
+
+#: views\text.add.html:26
+#: views\text.edit.html:46
+msgid "Toggle Dropdown"
+msgstr ""
+
+#: views\buy.home.html:44
+#: views\cart.html:81
+msgid "Total price:"
+msgstr ""
+
+#: views\buy.confirmation.html:58
+msgid "Transaction ID :"
+msgstr ""
+
+#: views\buy.confirmation.html:48
+msgid "Transaction amount :"
+msgstr ""
+
+#: views\buy.confirmation.html:4
+msgid "Transaction completed successfully"
+msgstr ""
+
+#: views\buy.confirmation.html:63
+msgid "Transaction date :"
+msgstr ""
+
+#: views\images.upload.html:52
+msgid "Type"
+msgstr ""
+
+#: views\image.html:11
+#: views\images.home.html:23
+msgid "Upload image"
+msgstr ""
+
+#: views\images.home.html:24
+msgid "Upload your own photos or logos"
+msgstr ""
+
+#: views\images.my-images.html:19
+msgid "You have no uploads."
+msgstr ""
+
+#: views\buy.confirmation.html:39
+msgid "Your order : {{order.id}}"
+msgstr ""
+
+#: views\cart.html:1
+msgid "Your shopping cart is empty!"
+msgstr ""
+
+#: views\buy.checkout.html:92
+msgid "Zip/Postal code"
+msgstr ""
+
+#: views\product.browser.html:84
+#: views\product.home.html:23
+msgid "from"
+msgstr ""
+
+#: views\images.upload.html:19
+msgid "or"
+msgstr ""
+
+#: views\buy.payment-method.html:21
+msgid "{{paymentMethod.name}}"
+msgstr ""
+
+#: views\buy.custom.html:4
+msgid "{{title}}"
+msgstr ""

@@ -1,0 +1,12 @@
+/src/node_modules
+/src/bower_components
+/storage
+
+composer.phar
+composer.lock
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
+.jshintrc
+PHP_errors.log

@@ -1,0 +1,64 @@
+<br ng-class="{'hidden-xs':isMobile}"/>
+<br ng-class="{'hidden-xs':isMobile}"/>
+<div class="panel panel-default hidden-xs">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-4 text-center">
+                <br />
+                <a href="" class="text-center">
+                    <img ng-src="{{ imageUrl( {product:currentItem.product.slug, w:200, h:200, variant:currentItem.variant.slug} ) }}" style="width: 100%"/>
+                </a>
+            </div>
+
+            <div class="col-xs-8">
+<br />
+                <ol class="breadcrumb">
+                    <li><a href="#">{{currentItem.product.category}}</a></li>
+                    <li class="active">{{currentItem.product.name}}</li>
+                </ol>
+                <h4>{{currentItem.product.name}}</h4>
+
+                <a href="" class="btn btn-default btn-block"  ui-sref="app.product.browser"><i class="fa fa-angle-double-right"></i> Change product</a>
+                <br />
+                <span><translate>from</translate> <strong>{{money.format(currentItem.variant.price)}}</strong><span class="normal">/each</span></span>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-12">
+                <strong translate>Change color:</strong>
+            </div>
+
+            <div class="col-md-12">
+                <div class="color-picker">
+
+                    <a href="" ng-class="{active: currentItem.variant == variant}"  ng-repeat="variant in currentItem.product.variants" class="color-selector" ng-click="setSelectedVariant(variant)">
+                        <span ng-repeat="(key, hex) in variant.colors" style="display: block; width: 16px; height: 16px;margin-left:0px; float:left;" ng-style="{ 'background' :hex, 'margin-left' : key*8 }"></span>
+                    </a>
+
+
+                </div>  
+            </div>
+        </div>        
+        <hr />
+
+        <div class="row">
+            <div class="col-md-12">
+                <strong translate>Description:</strong>
+            </div>
+
+            <div class="col-md-12" ng-bind-html="currentItem.product.description">
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+</div>

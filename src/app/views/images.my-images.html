@@ -1,0 +1,60 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+      
+        <div class="row font-category-selector" ng-show="myImages.length > 0">
+                <div class="col-sm-8">
+			         <h3 style="margin-top: 10px;" translate>Select an image</h3>
+                </div>                
+                <div class="col-sm-4">
+
+
+                </div>
+            </div>
+      
+    <hr style="margin-bottom: 0px;"  ng-show="myImages.length > 0"/>
+
+    <div class="text-center" ng-show="myImages.length == 0">
+      <br />
+      <br />
+      <p class="" translate>You have no uploads.</p>
+            <div class="text-center">
+              <a ui-sref="app.images.upload" class="no-upload">
+                <i class="fa fa-plus-circle"></i>
+              </a>
+              <br /> <br /> <br /><a href="" ui-sref="app.images.upload" translate>Click here</a> to upload a new image
+            </div>  
+                  <br />
+      <br /> 
+    </div>
+      
+    <perfect-scrollbar class="scroller external-scrollbar clipArt-scroller" wheel-propagation="true" wheel-speed="50" suppress-scroll-x="true" refresh-on-change="selectedCategory"  ng-show="myImages.length > 0">
+        <div class="row clipArt-selector">
+
+
+            <div class="col-xs-4 myImage-thumbnail" ng-repeat="img in myImages">
+              <a href="" ng-click="addImage( uploadURL( img.path ) )">
+                <img ng-src="{{ uploadURL( img.path ) }}"  />
+              </a>
+            </div>        
+            <div class="col-xs-4 myImage-thumbnail text-center">
+              <a ui-sref="app.images.upload">
+                <i class="fa fa-plus-circle thumbnail-upload"></i>
+              </a>
+            </div>            
+            
+            <div class="col-xs-4 myImage-thumbnail" ng-repeat="n in [] | range:12">
+             
+            </div>
+        </div>
+    </perfect-scrollbar>
+      
+      
+
+
+  </div>
+  
+  
+  
+  
+  
+</div>

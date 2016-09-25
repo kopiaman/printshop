@@ -1,0 +1,107 @@
+<div class="empty" ng-show="items.length == 0" translate>Your shopping cart is empty!</div>
+
+<div class="modal-header" ng-show="items.length > 0">
+    
+  <button type="button" class="close" data-dismiss="modal" ng-click="dismiss()"><span aria-hidden="true">&times;</span><span class="sr-only" translate>Close</span></button>
+  <h4 class="modal-title" translate>My cart</h4>
+    
+</div>
+
+<div class="modal-body" ng-show="items.length > 0">
+
+
+
+    <div class="row">
+        <div class="col-md-12" style="max-height: 400px; overflow-y: scroll;">
+
+            <div class="alert alert-success" role="alert" ng-show="justAdded">
+              <strong translate>Saved to cart!</strong> The items below are saved in your cart. When you're ready, please click on the 'Proceed to checkout' button.
+            </div>
+
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th class="col-md-4" translate>Description</th>
+                  <th class="col-md-4" translate>Quantities</th>
+                  <th class="col-md-2" translate>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr ng-repeat="item in items">
+                  <td>
+                    <span ng-class="{bold: item.id == currentItem.id}" title="{{item.id}}">{{item.product.name}} <span ng-hide="item.id == currentItem.id">(<a href="" ng-click="switchCurrentItem(item.id)" translate>Edit</a>)</span></span><br />
+                    <br />
+
+                    <div class="row">
+                      <div class="col-md-5" ng-repeat="orientation in item.product.orientations">
+
+                      <div style="position: relative; display: block;margin: 0 0px 10px 0; padding: 10px; background-repeat: no-repeat; background-color: #fff; background-position: 50% 50%" ng-style="{ 'width' :thumbWidth+20, 'height' : thumbWidth+20, 'background-image': 'url(' +  imageUrl({product:item.product.slug, w:thumbWidth, h:thumbWidth, variant:item.variant.slug, orientation:orientation.name})  + ')' }" class="thumbnail">
+
+                          <div style="position: absolute; display: block;"  ng-style="{ 'width' :imageDims(orientation).printableWidth, 'height' : imageDims(orientation).printableHeight, 'top': (imageDims(orientation).printableOffsetY) + calcLeft(thumbWidth, thumbWidth) + 10, 'left': (imageDims(orientation).printableOffsetX) + calcLeft(thumbWidth, thumbWidth) + 10}">
+
+                              <img ng-src="{{item.images[orientation.name]}}" ng-style="{ 'width' :imageDims(orientation).printableWidth, 'height' : imageDims(orientation).printableHeight }"/>
+
+                          </div>
+                          
+                      </div>
+
+                  </div>
+                </div>
+                    <br />
+                    <a href="" ng-click="duplicateItem(item)" translate>Duplicate design</a>
+                  </td>
+                  <td>
+                    <div class="row text-center ">
+                        <div class="col-md-6" ng-repeat="(size, quantity) in item.quantities" style="margin-bottom: 10px;">
+                            <h5>{{size}}</h5>
+                            <input ui-spinner="{min: 0, mouseWheel: false}" ng-change="reCalculatePrice()" ng-model="item.quantities[size]" class="ng-spinner text-center" />            
+                        </div>
+                    </div>
+                    <br />
+                  </td>
+                  <td>
+                    <div>
+                      {{money.format(item.total_price)}} <a href="" class="delete" ng-click="removeItem(item.id)"><i class="fa fa-times"></i></a>
+                      <br />
+                      <br />
+                      <br />
+                      
+                      <p class="small text-italic text-muted">Variant:{{item.variant.name}}<br />Quantity: {{item.total_quantity}}<br />
+                      Per item: <span ng-show="item.total_quantity == 0">{{money.format(item.single_price)}}</span><span ng-show="item.total_quantity > 0">{{money.format(item.discount_price)}}</span><br /></p>
+
+                    </div>
+                  </td>
+                </tr>
+              </tbody>              
+              <tfooter>
+
+                <tr>
+                  <td></td>
+                  <td translate>Total price:</td>
+                  <td>{{money.format($parent.totalPrice)}}</td>
+                </tr>
+              </tfooter>
+            </table>         
+        </div>
+
+     
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <a href="" ng-click="addNewItem()"><i class="fa fa-plus"></i> Add another product</a>
+        </div>
+    </div>
+
+</div>        
+
+
+<div class="modal-footer" ng-show="items.length > 0">
+	<div class="tooltip-wrapper pull-right" ng-show="totalPrice == 0" data-toggle="tooltip" data-title="Please select your quantities">
+		<button class="btn btn-primary disabled" translate>Proceed to checkout</button>
+	</div>    
+    <button class="btn btn-primary pull-right" ng-click="goToCheckout()" ng-show="totalPrice > 0" translate>Proceed to checkout</button>
+    <button class="btn btn-default pull-left" ui-sref="app.buy.home" ng-click="dismiss()" translate>Close</button>
+</div>

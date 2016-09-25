@@ -1,0 +1,18 @@
+<br class="hidden-xs"/>
+<a ui-sref="app.product.home" class="mute-link visible-xs" ><i class="fa fa-angle-left"></i> <translate>Back to designer</translate></a>
+<br class="visible-xs"/>
+<div ng-if="!isHome">
+	<br class="hidden-xs"/>
+	<br class="hidden-xs"/>
+    
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li ui-sref-active="active" ><a ui-sref="app.images.clip-art" translate>Clip Art</a></li>
+      <li ui-sref-active="active"><a ui-sref="app.images.upload" translate>Upload image</a></li>
+      <li ui-sref-active="active"><a ui-sref="app.images.my-images" translate>My images</a></li>
+      <li ui-sref-active="active" class="edit"><a ui-sref="app.images.edit" translate>Edit image</a></li>
+    </ul>
+    
+</div>
+
+<div ui-view></div>

@@ -1,0 +1,8 @@
+paypal_username: ''
+paypal_password: ''
+paypal_signature: ''
+paypal_environment: sandbox
+hidden_keys: paypal_signature
+name: PayPal
+position: 2
+status: 1

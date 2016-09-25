@@ -1,0 +1,36 @@
+<div class="modal-header">
+
+  <button type="button" class="close" data-dismiss="modal" ng-click="dismiss()"><span aria-hidden="true">&times;</span><span class="sr-only" translate>Close</span></button>
+  <h4 class="modal-title" translate>Choose a payment method...</h4>
+
+</div>
+
+<div class="modal-body">
+
+    <div class="row payment-choice">
+        <div class="col-xs-12">
+            <div class="row">
+
+
+                <div class="col-xs-4" ng-repeat="paymentMethod in paymentMethods" ng-click="$parent.selectedMethod = paymentMethod.slug">
+
+                    <div class="thumbnail well text-center" ng-class="{'well-clear': paymentMethod.slug != $parent.selectedMethod}">
+                        <img ng-src="css/images/payment_methods/{{paymentMethod.slug}}.png" alt="{{paymentMethod.name}}">
+                        <div class="caption">
+                            <input type="radio" name="payment_method" ng-model="$parent.selectedMethod" value="{{paymentMethod.slug}}">
+                            <p translate>{{paymentMethod.name}}</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>        
+
+<div class="modal-footer">
+    <a href="" class="btn btn-default btn-primary" ng-click="select()"><i class="icon-chevron-left"></i> Make payment</a>
+</div>

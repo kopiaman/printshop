@@ -1,0 +1,95 @@
+<br class="hidden-xs"/>
+<br class="hidden-xs"/>
+<div class="panel panel-default" ng-class="{'mobile-footer  navbar-fixed-bottom':isMobile}" id="images.edit" ng-hide="fontSelectionWindow">
+    <div class="panel-body">
+
+        <div class="row">
+            <div class="col-md-12">
+
+
+                    <div class="row" ng-show="colors.length > 0">
+                        <div class="col-md-12">
+                            <p style="margin-bottom: 0;" translate>Colors</p>
+
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div ng-repeat="(index, color) in colors" style="float: left; margin-right: 5px; margin-bottom: 5px;">
+                                        <spectrum-colorpicker ng-model="colors[index].replacement" options="{showPaletteOnly: true, togglePaletteOnly: false, color: color.replacement, palette: palette, hideAfterPaletteSelect:true}" format="'hex'" ng-hide="onHide()" ng-show="onShow()"></spectrum-colorpicker>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+
+                    <div class="row" ng-show="colors.length == 0">
+                        <div class="col-md-12">
+                            <p style="margin-bottom: 0;" translate>Colors</p>
+
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div style="float: left; margin-right: 5px; margin-bottom: 5px;">
+                                        <img src="css/images/icons/Photo-32.png" />
+                                    </div>
+                                    <div style="float: left; margin-right: 5px; margin-bottom: 5px;" translate>
+                                        Photo/Full color
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    
+                    
+        <div class="row">
+            <div class="col-md-12">
+
+                <br />
+                <p translate>Flip/Flop : </p>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <a href="" class="btn btn-default btn-block btn-control" ng-click="flipHorizontal()"><img style="width: 16px" src="css/images/icons/flip_horizontal-32.png" /> <translate>Flip horizontal</translate></a>
+                    </div>   
+                    <div class="col-xs-6">
+                        <a href="" class="btn btn-default btn-block btn-control" ng-click="flipVertical()"><img style="width: 16px" src="css/images/icons/flip_vertical-26.png" /> <translate>Flip vertical</translate></a>
+                    </div>                  
+                </div>
+
+                <br class="hidden-xs"/>
+                <br class="hidden-xs"/>
+                <div class="row hidden-xs">
+                    <div class="col-md-6">
+                        <p translate>Rotation (degrees &deg;) : </p>
+                        <div class="text-center">
+                            <input type="text" id="rotation-image" data-min="0" data-max="359">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p translate>Center : </p>
+                        <a href="" class="btn btn-default btn-block btn-control" ng-click="setHorizontalCenter()"><img style="width: 20px" src="css/images/icons/resize_horizontal-26.png" /> <translate>Center horizontally</translate></a>
+
+                        <a href="" class="btn btn-default btn-block btn-control" ng-click="setVerticalCenter()"><img style="width: 20px" src="css/images/icons/resize_vertical-26.png" /> <translate>Center vertically</translate></a>
+
+
+                    </div>					
+                </div>
+                
+            </div>
+        </div>
+            
+      
+                    
+                    
+            </div>
+            
+        </div>
+
+

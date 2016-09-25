@@ -1,0 +1,79 @@
+<div class="modal-header">
+
+  <button type="button" class="close" data-dismiss="modal" ng-click="dismiss()"><span aria-hidden="true">&times;</span><span class="sr-only" translate>Close</span></button>
+  <h4 class="modal-title" ng-show="order.payment_status == 'paid'" translate>Transaction completed successfully</h4>
+  <h4 class="modal-title" ng-show="order.payment_status != 'paid'" translate>Payment instructions</h4>
+
+</div>
+
+<div class="modal-body">
+
+    <div class="row">
+        <div class="col-xs-11 well" style="margin-left: 20px;">
+            <div class="row">
+                <div class="col-sm-5 col-xs-12">
+                    <p ng-show="order.payment_status == 'paid'">
+                        Thanks for your order. You will be e-mailed confirmation at<br />
+                        <strong>{{order.email}}</strong><br />
+                        <br />
+                        <span class="hidden-xs">Your order details are displayed on the right</span>
+                    </p>                    
+
+                    <p ng-show="order.payment_status != 'paid'">
+                        <strong translate>Instructions</strong>
+                    </p>
+                    <p ng-bind-html="order.instructions" ng-show="order.payment_status != 'paid'"></p>
+
+                    <br class="hidden-xs"/>
+                    <br class="hidden-xs"/>
+                    <br class="hidden-xs"/>
+                    <br class="hidden-xs"/>
+                    <br class="hidden-xs"/>
+
+                    <a href="" class="btn btn-default btn-primary hidden-xs" ng-click="dismiss()"><i class="icon-chevron-left"></i> Continue shopping...</a>
+
+                </div>
+
+                <div class="col-sm-7 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" translate>Your order : {{order.id}}</div>
+                        <div class="panel-body">
+
+                            <div class="row">
+                                <div class="col-xs-6"><strong translate>Description : </strong></div>
+                                <div class="col-xs-6">{{order.description}}</div>
+                            </div>  
+                            <br />
+                            <div class="row">
+                                <div class="col-xs-6"><strong translate>Transaction amount : </strong></div>
+                                <div class="col-xs-6">{{order.amount}} {{order.currency}}</div>
+                            </div>  
+                            <br />                            
+                            <div class="row">
+                                <div class="col-xs-6"><strong translate>Postage : </strong></div>
+                                <div class="col-xs-6">{{order.postage}}</div>
+                            </div>  
+                            <br />
+                            <div class="row" ng-show="order.transaction_id">
+                                <div class="col-xs-6"><strong translate>Transaction ID : </strong></div>
+                                <div class="col-xs-6">{{order.transaction_id}}</div>
+                            </div>
+                            <br ng-show="order.transaction_id"/>
+                            <div class="row">
+                                <div class="col-xs-6"><strong translate>Transaction date : </strong></div>
+                                <div class="col-xs-6">{{order.date}}</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>        
+
+<div class="modal-footer visible-xs">
+    <a href="" class="btn btn-default btn-primary" ng-click="dismiss()"><i class="icon-chevron-left"></i> Continue shopping...</a>
+</div>
